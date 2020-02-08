@@ -1,0 +1,5 @@
+Django>3.0.0
+psycopg2
+python-decouple
+black
+flake8
