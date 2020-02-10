@@ -118,3 +118,4 @@ dmypy.json
 
 .devcontainer
 .vscode
+docker/backend/.env
