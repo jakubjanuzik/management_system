@@ -14,4 +14,3 @@ class ViewWrapper(View):
         return HttpResponse(
             json.dumps(body), status=status, content_type="application/json"
         )
-

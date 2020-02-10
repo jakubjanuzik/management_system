@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_countries",
     "django_extensions",
+    "graphene_django",
     "clients",
     "projects",
 ]
@@ -127,3 +128,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
+
+GRAPHENE = {"SCHEMA": "management_system.schema.schema"}
+

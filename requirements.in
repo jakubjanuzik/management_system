@@ -5,3 +5,6 @@ black
 flake8
 django-countries
 django-extensions
+graphene-django
+isort
+ipdb

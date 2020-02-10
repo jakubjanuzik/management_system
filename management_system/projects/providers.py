@@ -1,10 +1,8 @@
-from http import HTTPStatus
-
 from common.exceptions import EntityDoesNotExist
 from projects.serializers import ProjectSerializer
 
 
-class ProjectView:
+class ProjectProvider:
     def __init__(self, get_project_interactor):
         self.get_project_interactor = get_project_interactor
 
@@ -14,10 +12,8 @@ class ProjectView:
                 name=name
             ).execute()
         except EntityDoesNotExist:
-            body = {"error": "Project does not exist!"}
-            status = HTTPStatus.NOT_FOUND
+            body = {"error": "Product does not exist!"}
         else:
             body = ProjectSerializer.serialize(project)
-            status = HTTPStatus.OK
 
-        return body, status
+        return body
