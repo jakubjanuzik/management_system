@@ -22,7 +22,11 @@ case "$COMMAND" in
   "test")
     pytest "$@"
     ;;
-
+  "sync")
+    cd ..
+    pip-sync
+    cd -
+    ;;
   *)
     echo "Unknown command: $1."
     exit 1

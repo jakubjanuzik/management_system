@@ -9,6 +9,8 @@ asgiref==3.2.3            # via django
 attrs==19.3.0             # via black
 black==19.10b0
 click==7.0                # via black
+django-countries==5.5
+django-extensions==2.2.7
 django==3.0.3
 entrypoints==0.3          # via flake8
 flake8==3.7.9
@@ -20,6 +22,7 @@ pyflakes==2.1.1           # via flake8
 python-decouple==3.3
 pytz==2019.3              # via django
 regex==2020.1.8           # via black
+six==1.14.0               # via django-countries, django-extensions
 sqlparse==0.3.0           # via django
 toml==0.10.0              # via black
 typed-ast==1.4.1          # via black
