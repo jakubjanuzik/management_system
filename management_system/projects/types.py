@@ -11,16 +11,16 @@ class Product(graphene.ObjectType):
     # TODO: Add client once get the type.
 
     def resolve_id(parent, info):
-        return parent["id"]
+        return parent.id
 
     def resolve_name(parent, info):
-        return parent["name"]
+        return parent.name
 
     def resolve_description(parent, info):
-        return parent["description"]
+        return parent.description
 
     def resolve_is_global(parent, info):
-        return parent["is_global"]
+        return parent.is_global
 
     def resolve_is_internal(parent, info):
-        return parent["is_internal"]
+        return parent.is_internal

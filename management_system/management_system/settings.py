@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+
 from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -42,7 +43,7 @@ INSTALLED_APPS = [
     "django_extensions",
     "graphene_django",
     "clients",
-    "projects",
+    "projects.apps.ProjectsConfig",
 ]
 
 MIDDLEWARE = [
@@ -130,4 +131,3 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 GRAPHENE = {"SCHEMA": "management_system.schema.schema"}
-
