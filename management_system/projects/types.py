@@ -1,7 +1,7 @@
 import graphene
 
 
-class Product(graphene.ObjectType):
+class Project(graphene.ObjectType):
     id = graphene.ID()
     name = graphene.String()
     description = graphene.String()

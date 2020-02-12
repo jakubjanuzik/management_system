@@ -2,18 +2,18 @@ import graphene
 import graphql
 from common.exceptions import EntityDoesNotExist
 from projects.factory import ProjectFactory
-from projects.types import Product
+from projects.types import Project
 
 REPOSITORY = ProjectFactory().get()
 
 
 class Query(graphene.ObjectType):
-    product = graphene.Field(Product, name=graphene.String(required=True))
+    project = graphene.Field(Project, name=graphene.String(required=True))
 
-    def resolve_product(parent, info, name):
+    def resolve_project(parent, info, name):
         try:
-            product = REPOSITORY.get_project(name=name)
+            project = REPOSITORY.get_project(name=name)
         except EntityDoesNotExist:
-            raise graphql.GraphQLError("Product does not exist!")
+            raise graphql.GraphQLError("Project does not exist!")
 
-        return product
+        return project
