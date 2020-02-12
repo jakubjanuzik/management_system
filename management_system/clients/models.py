@@ -1,11 +1,15 @@
+from decimal import Decimal
+
 from django.db import models
 from django_countries.fields import CountryField
-from decimal import Decimal
 
 
 class Client(models.Model):
     name = models.CharField(max_length=128, unique=True)
     description = models.TextField()
+
+    def __str__(self):
+        return f"Client - {self.name}"
 
 
 class ClientAddressInfo(models.Model):
@@ -30,7 +34,12 @@ class InvoiceItem(models.Model):
     description = models.CharField(max_length=100)
     unit_price = models.DecimalField(max_digits=8, decimal_places=2)
     quantity = models.DecimalField(max_digits=8, decimal_places=2, default=1)
+    currency = models.CharField(max_length=8)
 
+    @property
     def total(self):
+        if not self.unit_price or self.quantity:
+            return Decimal("0.00")
+
         total = Decimal(str(self.unit_price * self.quantity))
         return total.quantize(Decimal("0.01"))
