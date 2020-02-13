@@ -1,5 +1,5 @@
 import graphene
-
+from projects.schema import Mutation as ProjectMutation
 from projects.schema import Query as ProjectsQuery
 
 
@@ -7,4 +7,8 @@ class Query(ProjectsQuery):
     pass
 
 
-schema = graphene.Schema(query=Query)
+class Mutation(ProjectMutation):
+    pass
+
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
