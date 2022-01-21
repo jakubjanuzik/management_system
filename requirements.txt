@@ -4,52 +4,117 @@
 #
 #    pip-compile
 #
-aniso8601==7.0.0          # via graphene
-appdirs==1.4.3            # via black
-asgiref==3.2.3            # via django
-attrs==19.3.0             # via black
-backcall==0.1.0           # via ipython
+aniso8601==7.0.0
+    # via graphene
+appdirs==1.4.3
+    # via black
+asgiref==3.2.3
+    # via django
+attrs==19.3.0
+    # via black
+backcall==0.1.0
+    # via ipython
 black==19.10b0
-click==7.0                # via black
-decorator==4.4.1          # via ipython, traitlets
-django-countries==5.5
-django-extensions==2.2.7
+    # via -r requirements.in
+click==7.0
+    # via black
+decorator==4.4.1
+    # via
+    #   ipython
+    #   traitlets
 django==3.0.3
-entrypoints==0.3          # via flake8
+    # via
+    #   -r requirements.in
+    #   graphene-django
+django-countries==5.5
+    # via -r requirements.in
+django-extensions==2.2.7
+    # via -r requirements.in
+entrypoints==0.3
+    # via flake8
 flake8==3.7.9
+    # via -r requirements.in
+graphene==2.1.8
+    # via graphene-django
 graphene-django==2.8.1
-graphene==2.1.8           # via graphene-django
-graphql-core==2.3.1       # via graphene, graphene-django, graphql-relay
-graphql-relay==2.0.1      # via graphene
+    # via -r requirements.in
+graphql-core==2.3.1
+    # via
+    #   graphene
+    #   graphene-django
+    #   graphql-relay
+graphql-relay==2.0.1
+    # via graphene
 inject==4.0.0
+    # via -r requirements.in
 ipdb==0.12.3
-ipython-genutils==0.2.0   # via traitlets
-ipython==7.12.0           # via ipdb
+    # via -r requirements.in
+ipython==7.16.3
+    # via ipdb
+ipython-genutils==0.2.0
+    # via traitlets
 isort==4.3.21
-jedi==0.16.0              # via ipython
-mccabe==0.6.1             # via flake8
-parso==0.6.1              # via jedi
-pathspec==0.7.0           # via black
-pexpect==4.8.0            # via ipython
-pickleshare==0.7.5        # via ipython
-promise==2.3              # via graphene-django, graphql-core, graphql-relay
-prompt-toolkit==3.0.3     # via ipython
+    # via -r requirements.in
+jedi==0.16.0
+    # via ipython
+mccabe==0.6.1
+    # via flake8
+parso==0.6.1
+    # via jedi
+pathspec==0.7.0
+    # via black
+pexpect==4.8.0
+    # via ipython
+pickleshare==0.7.5
+    # via ipython
+promise==2.3
+    # via
+    #   graphene-django
+    #   graphql-core
+    #   graphql-relay
+prompt-toolkit==3.0.3
+    # via ipython
 psycopg2==2.8.4
-ptyprocess==0.6.0         # via pexpect
-pycodestyle==2.5.0        # via flake8
-pyflakes==2.1.1           # via flake8
-pygments==2.5.2           # via ipython
+    # via -r requirements.in
+ptyprocess==0.6.0
+    # via pexpect
+pycodestyle==2.5.0
+    # via flake8
+pyflakes==2.1.1
+    # via flake8
+pygments==2.5.2
+    # via ipython
 python-decouple==3.3
-pytz==2019.3              # via django
-regex==2020.1.8           # via black
-rx==1.6.1                 # via graphql-core
-singledispatch==3.4.0.3   # via graphene-django
-six==1.14.0               # via django-countries, django-extensions, graphene, graphene-django, graphql-core, graphql-relay, promise, singledispatch, traitlets
-sqlparse==0.3.0           # via django
-toml==0.10.0              # via black
-traitlets==4.3.3          # via ipython
-typed-ast==1.4.1          # via black
-wcwidth==0.1.8            # via prompt-toolkit
+    # via -r requirements.in
+pytz==2019.3
+    # via django
+regex==2020.1.8
+    # via black
+rx==1.6.1
+    # via graphql-core
+singledispatch==3.4.0.3
+    # via graphene-django
+six==1.14.0
+    # via
+    #   django-countries
+    #   django-extensions
+    #   graphene
+    #   graphene-django
+    #   graphql-core
+    #   graphql-relay
+    #   promise
+    #   singledispatch
+    #   traitlets
+sqlparse==0.3.0
+    # via django
+toml==0.10.0
+    # via black
+traitlets==4.3.3
+    # via ipython
+typed-ast==1.4.1
+    # via black
+wcwidth==0.1.8
+    # via prompt-toolkit
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
